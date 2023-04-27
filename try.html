@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="try.css">
+  <title>TRY</title>
+</head>
+
+<body>
+  <!-------------------- Butonlarım------------ -->
+  <div>
+    <div id="setting" class="button" onclick="openModal()">
+      <a href="#">Setting</a>
+    </div>
+  </div>
+  <div>
+    <!-- onclick="acModal()" buton clasımın yanına eklenmıs halıdır. -->
+    <!-- <div id="sound" class="button" >
+      <a href="#">Sound</a>
+    </div> -->
+  </div>
+  <div>
+    <div id="bonus" class="button" onclick="allFlip()">
+      <a href="#">Bonus</a>
+    </div>
+  </div>
+  <!-- --------------------------------------------------- -->
+  <!-- ----------------Saat Yapım---------------------- -->
+  <div class="clock-container">
+    <img src="./assets/clock.svg" width="50px" alt="">
+    <div class="time-div">
+      <p><span id="dakika">01</span><span>:</span><span id="saniye">30</span></p>
+
+    </div>
+  </div>
+  <!-- --------------------------------------------------- -->
+  <!-- -------------Cart Yapım ---------------------------- -->
+
+  <!-- render ile yapılacak kısım cartlar gelecek -->
+  <div class="main-container"></div>
+  <!-- render sonu -->
+
+
+  <!-- --------------------Modal Yapım---------------------- -->
+  <div id="settingModal" class="modal hidden">
+
+    <div>
+      <div id="resume" class="button" onclick="closeModal()">
+        <a href="#">RESUME</a>
+      </div>
+    </div>
+
+    <div>
+      <div id="restart" class="button" onclick="window.location.reload()">
+        <a href="#">RESTART</a>
+      </div>
+    </div>
+
+    <div>
+      <div id="quit" class="button" onclick="openModal()">
+        <a href="game-start.html">QUIT</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="overlay" style="display: none;"></div>
+  <!-- --------------------------------------------------- -->
+  
+  <!-- skor tabela modal start -->
+  <div id="scoreModal" class="score hidden">
+
+
+    <h1 style="color: antiquewhite;" id="lose"></h1>
+    <h1 style="color: aliceblue;" id="win"></h1>
+    <h3 style="color: white;font-family: sans-serif;font-size: 25px;" id="skorr"></h1>
+    <h3 style="color: white;font-family: sans-serif;font-size: 25px;margin-right: 80px;" id="hamlee"></h1>
+
+    <div>
+      <div style="margin-top: 40px;" id="restart" class="button" onclick="window.location.reload()">
+        <a href="#">
+          Play Again</a>
+      </div>
+    </div>
+    
+  </div>
+  <div id="overlay2" style="display: none;"></div>
+
+  <!-- skor tabela modal end -->
+  <script src="try.js"></script>
+</body>
+
+</html>
